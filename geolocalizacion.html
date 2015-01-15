@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Geolocalizacion</title>
+</head>
+<body>
+	<h1>Probando Geolocalizacion de la Asus...</h1>
+<script type="text/javascript">
+	alert("probando script");
+	if(navigator.geolocation){
+		navigator.geolocation.getCurrentPosition (success, error);
+	}else{
+		alert("Tu navegador no soporta la geolocalizacion");
+	}
+
+	function success(position){
+		var lat = position.coords.latitude;
+		var longitud = position.coords.longitude;
+		alert("Tu latitud es: "+lat+ " y tu longitud es: "+longitud);
+	}
+
+	function error (position) {
+		alert("Error");
+	}
+</script>
+</body>
+</html>
